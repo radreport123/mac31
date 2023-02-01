@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -20,4 +21,8 @@ app.use('/', (req, res, next) => {
 });
 
 
-app.listen(3000);
+
+app.listen(port, (req, res, next) => {
+    console.log('server is started on port 3000');
+});
+
